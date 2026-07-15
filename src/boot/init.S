@@ -36,6 +36,11 @@ init:
     csrw medeleg, t0
     csrw mideleg, t0
 
+    # enable the Sstc extension (activating the stimecmp register,
+    # otherwise stimecmp will be read-only zero)
+    # https://docs.riscv.org/reference/isa/priv/machine.html#sec:menvcfg
+    li t0, (1 << 63)
+    csrs menvcfg, t0
     # allow S-mode to access the stimecmp register, otherwise we get an
     # illegal instruction fault on access
     # https://docs.riscv.org/reference/isa/priv/machine.html#mcounteren
