@@ -5,6 +5,7 @@
 #include <kernel/printf.h>
 #include <kernel/serial.h>
 #include <kernel/trap.h>
+#include <arch/timer.h>
 
 /* defined in src/trap_entry.S */
 extern void trap_entry();
