@@ -5,6 +5,8 @@
 #include <kernel/printf.h>
 #include <kernel/mm.h>
 #include <kernel/panic.h>
+#include <kernel/trap.h>
+
 
 extern void serial_puts(char *str);
 

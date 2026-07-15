@@ -5,6 +5,7 @@
 
 #include <kernel/serial.h>
 #include <kernel/panic.h>
+#include <kernel/trap.h>
 
 static struct {
 	struct spinlock lock;
