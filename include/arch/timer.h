@@ -10,5 +10,6 @@ void timer_irq_disable();
 void timer_irq();
 u64 timer_read();
 void timer_set_alarm(u64 secs);
+void timer_poll();
 
 #endif
